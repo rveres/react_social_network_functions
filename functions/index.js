@@ -59,8 +59,9 @@ const FBAuth = (req, res, next) => {
     .verifyIdToken(idToken)
     .then(decodedToken => {
       req.user = decodedToken;
+      console.log(decodedToken);
       return db
-        .collection("uesrs")
+        .collection("users")
         .where("userId", "==", req.user.uid)
         .limit(1)
         .get();
