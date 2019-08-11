@@ -55,4 +55,4 @@ app.post('/scream', (req, res) => {
 
 });
 
-exports.api = functions.https.onRequest(app);
+exports.api = functions.region('us-east1').https.onRequest(app);
