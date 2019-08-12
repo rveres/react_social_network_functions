@@ -110,3 +110,8 @@ exports.commentOnScream = (req, res) => {
       res.status(500).json({ error: "Something went wrong" });
     });
 };
+
+// Like a scream
+exports.likeScream = (req, res) => {
+  
+};
